@@ -51,3 +51,14 @@ export async function getStaticProps() {
     props: {},
   }
 }
+
+export async function getStaticPaths() {
+  return {
+    paths: [
+      {
+        params: { id: "1" },
+      },
+    ],
+    fallback: true,
+  }
+}
